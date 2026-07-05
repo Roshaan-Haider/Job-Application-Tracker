@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "422235746348",
+    "project_id": "jobtracker-987b0",
+    "storage_bucket": "jobtracker-987b0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422235746348:android:809c2680fb95e26c972189",
+        "android_client_info": {
+          "package_name": "com.example.jobtracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDACxsQ4pLyx-L1jJjW7VNNPGuiv3hYrTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
