@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.jobtracker.databinding.ItemJobBinding
 
 class JobAdapter(
-    private val jobs: List<JobApplication>
+    private val jobs: List<JobApplication>,
+    private val onEditClick: (JobApplication) -> Unit,
+    private val onDeleteClick: (JobApplication) -> Unit
 ) : RecyclerView.Adapter<JobAdapter.JobViewHolder>() {
 
     inner class JobViewHolder(val binding: ItemJobBinding) : RecyclerView.ViewHolder(binding.root)
@@ -24,6 +26,14 @@ class JobAdapter(
         holder.binding.dateApplied.text = job.dateApplied
         holder.binding.statusTag.setBackgroundColor(job.statusColor())
         holder.binding.statusTag.setTextColor(job.statusTextColor())
+
+        holder.binding.btnEdit.setOnClickListener {
+            onEditClick(job)
+        }
+
+        holder.binding.btnDelete.setOnClickListener {
+            onDeleteClick(job)
+        }
     }
 
     override fun getItemCount(): Int {

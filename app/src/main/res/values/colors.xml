@@ -13,4 +13,13 @@
     <color name="status_warning">#D29922</color>
     <color name="status_error">#F85149</color>
     <color name="border_subtle">#30363D</color>
+    <!-- JobTracker accent -->
+    <color name="accent_teal">#2DD4BF</color>
+    <color name="accent_teal_dim">#0F766E</color>
+
+    <!-- Status colors for job cards -->
+    <color name="status_applied">#2DD4BF</color>
+    <color name="status_interview">#F59E0B</color>
+    <color name="status_offer">#3FB950</color>
+    <color name="status_rejected">#F85149</color>
 </resources>

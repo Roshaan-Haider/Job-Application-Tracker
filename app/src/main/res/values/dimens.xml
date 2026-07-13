@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_lg">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+    <dimen name="space_xxl">48dp</dimen>
+
+    <dimen name="radius_sm">4dp</dimen>
+    <dimen name="radius_md">14dp</dimen>
+    <dimen name="radius_lg">20dp</dimen>
+    <dimen name="radius_xl">28dp</dimen>
+
+    <dimen name="text_label">11sp</dimen>
+    <dimen name="text_body_small">13sp</dimen>
+    <dimen name="text_body">15sp</dimen>
+    <dimen name="text_h3">18sp</dimen>
+    <dimen name="text_h1">26sp</dimen>
+</resources>

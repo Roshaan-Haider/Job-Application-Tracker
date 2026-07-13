@@ -1,6 +1,8 @@
 package com.example.jobtracker
 
 import android.graphics.Color
+import com.google.firebase.firestore.DocumentId
+
 data class JobApplication(
     val company: String = "",
     val title: String = "",
@@ -8,7 +10,7 @@ data class JobApplication(
     val isInternship: Boolean = false,
     val salary: String = "",
     val dateApplied: String = "",
-    val id: String = ""
+    @DocumentId val id: String = ""
 )
 
 fun JobApplication.statusColor(): Int {

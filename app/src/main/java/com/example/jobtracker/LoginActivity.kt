@@ -3,6 +3,7 @@ package com.example.jobtracker
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -61,6 +62,15 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
             startActivity(intent)
         }
+        val card = findViewById<LinearLayout>(R.id.loginCard)
+        card.alpha = 0f
+        card.translationY = 40f
+        card.animate()
+            .alpha(1f)
+            .translationY(0f)
+            .setDuration(350)
+            .setInterpolator(android.view.animation.DecelerateInterpolator())
+            .start()
 
     }
 

@@ -1,44 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_deepest"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    tools:context=".EditJobActivity">
 
     <LinearLayout
-        android:id="@+id/registerContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:minHeight="700dp"
         android:orientation="vertical"
         android:paddingHorizontal="@dimen/space_lg"
-        android:paddingVertical="@dimen/space_xxl">
+        android:paddingTop="@dimen/space_xl"
+        android:paddingBottom="@dimen/space_xxl">
 
-        <!-- Logo with circular background -->
-        <FrameLayout
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:background="@drawable/circle_teal_dim">
-
-            <ImageView
-                android:id="@+id/ivLogo"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:contentDescription="JobTracker logo"
-                android:src="@mipmap/ic_launcher" />
-
-        </FrameLayout>
+        <!-- Back arrow -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_teal_dim"
+            android:contentDescription="Back"
+            android:padding="10dp"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="@color/text_primary" />
 
         <!-- Hero text -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_md"
-            android:text="Create Account"
+            android:text="Edit Application"
             android:textColor="@color/text_primary"
             android:textSize="@dimen/text_h1"
             android:textStyle="bold" />
@@ -47,15 +42,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_xs"
-            android:gravity="center"
-            android:text="Start tracking every application\nfrom one simple dashboard."
+            android:text="Edit Job Application "
             android:textColor="@color/text_secondary"
-            android:textSize="@dimen/text_body"
-            android:lineSpacingMultiplier="1.4" />
+            android:textSize="@dimen/text_body" />
 
-        <!-- Register Card -->
+        <!-- Form Card -->
         <LinearLayout
-            android:id="@+id/registerCard"
+            android:id="@+id/formCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_xl"
@@ -63,28 +56,11 @@
             android:orientation="vertical"
             android:padding="@dimen/space_lg">
 
+            <!-- Company -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Let's get started"
-                android:textColor="@color/text_primary"
-                android:textSize="@dimen/text_h3"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/space_xs"
-                android:text="Fill in your details to sign up"
-                android:textColor="@color/text_secondary"
-                android:textSize="@dimen/text_body_small" />
-
-            <!-- Full name field -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/space_lg"
-                android:text="FULL NAME"
+                android:text="COMPANY"
                 android:textColor="@color/text_secondary"
                 android:textSize="@dimen/text_label"
                 android:letterSpacing="0.1" />
@@ -101,27 +77,26 @@
                 app:boxCornerRadiusTopStart="@dimen/radius_md"
                 app:boxStrokeColor="@color/border_subtle"
                 app:hintEnabled="false"
-                app:startIconDrawable="@drawable/ic_person"
+                app:startIconDrawable="@android:drawable/ic_menu_agenda"
                 app:startIconTint="@color/text_secondary">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/nameInput"
+                    android:id="@+id/companyInput"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
-                    android:hint="Jane Doe"
-                    android:inputType="textPersonName"
+                    android:hint="e.g. Google"
                     android:textColor="@color/text_primary"
                     android:textColorHint="@color/text_secondary"
                     android:textSize="@dimen/text_body" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Email field -->
+            <!-- Job Title -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/space_md"
-                android:text="EMAIL"
+                android:text="JOB TITLE"
                 android:textColor="@color/text_secondary"
                 android:textSize="@dimen/text_label"
                 android:letterSpacing="0.1" />
@@ -138,27 +113,26 @@
                 app:boxCornerRadiusTopStart="@dimen/radius_md"
                 app:boxStrokeColor="@color/border_subtle"
                 app:hintEnabled="false"
-                app:startIconDrawable="@drawable/ic_email"
+                app:startIconDrawable="@android:drawable/ic_menu_manage"
                 app:startIconTint="@color/text_secondary">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/emailInput"
+                    android:id="@+id/titleInput"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
-                    android:hint="you@example.com"
-                    android:inputType="textEmailAddress"
+                    android:hint="e.g. Android Developer"
                     android:textColor="@color/text_primary"
                     android:textColorHint="@color/text_secondary"
                     android:textSize="@dimen/text_body" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Password field -->
+            <!-- Salary -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/space_md"
-                android:text="PASSWORD"
+                android:text="SALARY (OPTIONAL)"
                 android:textColor="@color/text_secondary"
                 android:textSize="@dimen/text_label"
                 android:letterSpacing="0.1" />
@@ -175,29 +149,63 @@
                 app:boxCornerRadiusTopStart="@dimen/radius_md"
                 app:boxStrokeColor="@color/border_subtle"
                 app:hintEnabled="false"
-                app:startIconDrawable="@drawable/ic_lock"
-                app:startIconTint="@color/text_secondary"
-                app:endIconMode="password_toggle"
-                app:endIconTint="@color/text_secondary">
+                app:startIconDrawable="@android:drawable/ic_menu_sort_by_size"
+                app:startIconTint="@color/text_secondary">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/passwordInput"
+                    android:id="@+id/salaryInput"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
-                    android:hint="At least 8 characters"
-                    android:inputType="textPassword"
+                    android:hint="e.g. 120,000"
+                    android:inputType="number"
                     android:textColor="@color/text_primary"
                     android:textColorHint="@color/text_secondary"
                     android:textSize="@dimen/text_body" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Confirm password field -->
+            <!-- Status dropdown -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/space_md"
-                android:text="CONFIRM PASSWORD"
+                android:text="STATUS"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/text_label"
+                android:letterSpacing="0.1" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                app:boxBackgroundColor="@color/bg_surface"
+                app:boxCornerRadiusBottomEnd="@dimen/radius_md"
+                app:boxCornerRadiusBottomStart="@dimen/radius_md"
+                app:boxCornerRadiusTopEnd="@dimen/radius_md"
+                app:boxCornerRadiusTopStart="@dimen/radius_md"
+                app:boxStrokeColor="@color/border_subtle"
+                app:hintEnabled="false"
+                app:endIconTint="@color/text_secondary">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="Applied"
+                    android:inputType="none"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_secondary"
+                    android:textSize="@dimen/text_body" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Date -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:text="DATE APPLIED"
                 android:textColor="@color/text_secondary"
                 android:textSize="@dimen/text_label"
                 android:letterSpacing="0.1" />
@@ -214,32 +222,55 @@
                 app:boxCornerRadiusTopStart="@dimen/radius_md"
                 app:boxStrokeColor="@color/border_subtle"
                 app:hintEnabled="false"
-                app:startIconDrawable="@drawable/ic_lock"
-                app:startIconTint="@color/text_secondary"
-                app:endIconMode="password_toggle"
-                app:endIconTint="@color/text_secondary">
+                app:startIconDrawable="@android:drawable/ic_menu_my_calendar"
+                app:startIconTint="@color/text_secondary">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/confirmPasswordInput"
+                    android:id="@+id/dateEditText"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
-                    android:hint="Re-enter password"
-                    android:inputType="textPassword"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:inputType="none"
                     android:textColor="@color/text_primary"
                     android:textColorHint="@color/text_secondary"
                     android:textSize="@dimen/text_body" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Register button -->
+            <!-- Internship checkbox -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBoxInternship"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/accent_teal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_xs"
+                    android:text="This is an internship"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_body_small" />
+
+            </LinearLayout>
+
+            <!-- Add button -->
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnRegister"
+                android:id="@+id/addJobApplication"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_marginTop="@dimen/space_lg"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
-                android:text="Create Account"
+                android:text="Update Application"
                 android:textAllCaps="false"
                 android:textColor="@color/bg_deepest"
                 android:textSize="@dimen/text_body"
@@ -247,32 +278,6 @@
                 app:backgroundTint="@color/accent_teal"
                 app:cornerRadius="@dimen/radius_sm"
                 app:rippleColor="#33000000" />
-
-        </LinearLayout>
-
-        <!-- Login link -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_lg"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Already have an account?  "
-                android:textColor="@color/text_secondary"
-                android:textSize="@dimen/text_body_small" />
-
-            <TextView
-                android:id="@+id/alreadyAccountText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sign in"
-                android:textColor="@color/accent_teal"
-                android:textSize="@dimen/text_body_small"
-                android:textStyle="bold" />
 
         </LinearLayout>
 
