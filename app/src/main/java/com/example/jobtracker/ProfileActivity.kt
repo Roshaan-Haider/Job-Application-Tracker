@@ -26,7 +26,6 @@ class ProfileActivity : AppCompatActivity() {
         val displayName = user?.displayName?.takeIf { it.isNotBlank() } ?: email.substringBefore("@")
 
         binding.txtUserName.text = displayName
-        binding.txtUserEmail.text = email
         binding.txtAvatarInitial.text = displayName.first().uppercase()
 
         binding.btnBack.setOnClickListener { finish() }
