@@ -21,7 +21,7 @@ A clean, minimal Android app to track job applications — built to learn real-w
 
 | Add Application | Edit Application | Profile |
 |---|---|---|
-| ![Add](screenshots/add application.PNG) | ![Edit](screenshots/update.PNG) | ![Profile](screenshots/profile.PNG) |
+| ![Add](screenshots/add_application.PNG) | ![Edit](screenshots/update.PNG) | ![Profile](screenshots/profile.PNG) |
 
 ## Tech Stack
 
