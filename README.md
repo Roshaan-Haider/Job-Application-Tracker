@@ -17,7 +17,7 @@ A clean, minimal Android app to track job applications — built to learn real-w
 
 | Login | Register | Dashboard |
 |---|---|---|
-| ![Login](screenshots/login.png) | ![Register](screenshots/register.png) | ![Dashboard](screenshots/dashboard.png) |
+| ![Login](screenshots/login.PNG) | ![Register](screenshots/register.png) | ![Dashboard](screenshots/dashboard.png) |
 
 | Add Application | Edit Application | Profile |
 |---|---|---|
